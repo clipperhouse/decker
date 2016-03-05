@@ -27,6 +27,10 @@
 
     setInterval(tco, 2000);
     
+    // scroll top on header click
+    document.getElementById('global-nav-home').addEventListener('click', _ => { document.body.scrollTop = 0; });
+    document.querySelector('li.notifications').addEventListener('click', _ => { document.body.scrollTop = 0; });
+
     // remove side columns
     // already hidden, see styles.css
     // this is an optimization to reduce size of DOM
