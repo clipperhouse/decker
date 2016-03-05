@@ -28,9 +28,19 @@
     setInterval(tco, 2000);
     
     // scroll top on header click
-    document.getElementById('global-nav-home').addEventListener('click', _ => { document.body.scrollTop = 0; });
-    document.querySelector('li.notifications').addEventListener('click', _ => { document.body.scrollTop = 0; });
-
+    var home = document.getElementById('global-nav-home');
+    home.addEventListener('click', () => {
+        if (home.classList.contains('active')) {
+            document.body.scrollTop = 0;
+        }
+    });
+    var notifications = document.querySelector('li.notifications');
+    notifications.addEventListener('click', (evt) => {
+        if (notifications.classList.contains('active')) {
+            document.body.scrollTop = 0;
+        }
+    });
+    
     // remove side columns
     // already hidden, see styles.css
     // this is an optimization to reduce size of DOM
