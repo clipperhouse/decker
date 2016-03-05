@@ -3,7 +3,7 @@
 A Chrome extension that pretties up Twitter.
 
 - Widens the content area, removes right and left columns, including things like “Trends” and “Who to follow”.
-- Resolves (i.e. removes) t.co links for twitter.com, so not redirects.
+- Resolves (i.e. removes) t.co links for twitter.com, avoiding redirects.
 - Hides Moments
 
 This is for me! Feel free to use it but caveat emptor.
