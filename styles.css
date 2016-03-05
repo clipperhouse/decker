@@ -50,3 +50,7 @@ div.PermalinkOverlay-modal{
 div.permalink-container {
     width: 100%;
 }
+
+div.stream-item-activity-notification .latest-tweet .tweet-row {
+    max-width: inherit;
+}
