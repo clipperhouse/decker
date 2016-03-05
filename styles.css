@@ -16,12 +16,16 @@ div.timeline-tweet-box {
     display: none;
 }
 
-li.stream-item {
+li.stream-item, li.conversation-tweet-item {
     border-radius: 4px;
     margin: 2px 0;
 }
 
 div.tweet:hover {
+    background-color: transparent;
+}
+
+.conversation-module .conversation-tweet-item div.tweet:hover {
     background-color: transparent;
 }
 
