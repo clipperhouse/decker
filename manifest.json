@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "decker",
+  "description": "Style mods; resolves (i.e., removes) t.co redirects from twitter.com",
+  "version": "0.1",
+
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*"],
+      "css": ["styles.css"],
+      "js": ["decker.js"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "permissions": [
+    "http://*/"
+  ]
+}

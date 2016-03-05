@@ -1,0 +1,52 @@
+div.content-main {
+	width: 100%;
+    margin: 0;
+}
+
+div.dashboard {
+	display: none;
+}
+
+body.three-col div.content-main {
+    float: left;
+    margin: 0;
+}
+
+div.timeline-tweet-box {
+    display: none;
+}
+
+li.stream-item {
+    border-radius: 4px;
+    margin: 2px 0;
+}
+
+div.tweet:hover {
+    background-color: transparent;
+}
+
+li.moments {
+    display: none;
+}
+
+div.trends {
+    display: none;
+}
+
+div.permalink-footer {
+    display: none;
+}
+
+div.new-tweets-bar, div.new-tweets-bar:hover {
+    background-color: transparent;
+}
+
+div.PermalinkOverlay-modal{
+    left: 50%;
+    width: 960px;
+    margin-left: -480px;
+}
+
+div.permalink-container {
+    width: 100%;
+}
