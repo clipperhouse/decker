@@ -58,3 +58,7 @@ div.permalink-container {
 div.stream-item-activity-notification .latest-tweet .tweet-row {
     max-width: inherit;
 }
+
+div.stream-footer {
+    display: none;
+}
