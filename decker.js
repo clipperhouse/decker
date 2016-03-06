@@ -41,6 +41,22 @@
         }
     });
     
+    // click the new tweets bar (only if scrolled to top)
+    // the bar is positioned out of viewport, see styles.css
+    var clickNewTweets = function () {
+        var bar = document.querySelector('.new-tweets-bar');
+        if (bar && document.body.scrollTop < 1) {   // a bit of fudge here, scroll is often something like .9px
+            var click = new MouseEvent('click', {
+                'view': window,
+                'bubbles': true,
+                'cancelable': true
+            });
+            bar.dispatchEvent(click);
+        }
+    }
+
+    setInterval(clickNewTweets, 4000);
+    
     // remove side columns
     // already hidden, see styles.css
     // this is an optimization to reduce size of DOM
