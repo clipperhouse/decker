@@ -1,3 +1,7 @@
+#page-container, .global-nav div.container {
+    width: 960px;
+}
+
 div.content-main {
 	width: 100%;
     margin: 0;
