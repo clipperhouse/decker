@@ -29,33 +29,46 @@
     
     // scroll top on header click
     var home = document.getElementById('global-nav-home');
-    home.addEventListener('click', () => {
-        if (home.classList.contains('active')) {
-            document.body.scrollTop = 0;
-        }
-    });
     var notifications = document.querySelector('li.notifications');
-    notifications.addEventListener('click', (evt) => {
-        if (notifications.classList.contains('active')) {
-            document.body.scrollTop = 0;
-        }
+    var nav = [home, notifications];
+
+    for (var el of nav) {
+        (function (el) {
+            el.addEventListener('click', () => {
+                if (el.classList.contains('active')) {
+                    document.body.scrollTop = 0;
+                }
+            });
+        })(el);
+    }
+    
+    // the bar is positioned out of viewport, see styles.css
+    // move it down the DOM, gets rid of jumpy bits and style annoyances
+    var bar = document.querySelector('.js-new-items-bar-container');
+    if (bar) {
+        document.body.appendChild(bar);
+    }
+
+    // click for reuse later
+    var click = new MouseEvent('click', {
+        'view': window,
+        'bubbles': true,
+        'cancelable': true
     });
     
-    // click the new tweets bar (only if scrolled to top)
-    // the bar is positioned out of viewport, see styles.css
-    var clickNewTweets = function () {
-        var bar = document.querySelector('.new-tweets-bar');
-        if (bar && document.body.scrollTop < 1) {   // a bit of fudge here, scroll is often something like .9px
-            var click = new MouseEvent('click', {
-                'view': window,
-                'bubbles': true,
-                'cancelable': true
-            });
-            bar.dispatchEvent(click);
+    // click the home button if new tweets (only if scrolled to top)
+    var displayNewTweets = function () {
+        if (document.body.scrollTop >= 1) {
+            return;
+        }
+        for (var el of nav) {
+            if (el.classList.contains('active') && el.classList.contains('new')) {
+                el.querySelector('a').dispatchEvent(click);
+            }
         }
     }
 
-    setInterval(clickNewTweets, 4000);
+    setInterval(displayNewTweets, 2000);
     
     // remove side columns
     // already hidden, see styles.css
