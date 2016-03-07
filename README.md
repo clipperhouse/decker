@@ -14,3 +14,5 @@ This is for me! Feel free to use it but caveat emptor.
 Clone or download this repo.
 
 Click “Load unpacked extension…” from chrome://extensions, and point to the downloaded folder.
+
+![screen shot](https://raw.githubusercontent.com/clipperhouse/decker/master/Screen.Shot.2016-03-06.at.7.38.35.PM.png)
