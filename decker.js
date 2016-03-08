@@ -1,5 +1,5 @@
-(function () {
-    var expand = function (urlattr) {
+(function() {
+    var expand = function(urlattr) {
         var els = document.querySelectorAll('a[href*="//t.co"][' + urlattr + ']');
 
         for (var i = 0; i < els.length; i++) {
@@ -12,7 +12,7 @@
         }
     };
 
-    var abbrev = function (url) {
+    var abbrev = function(url) {
         var result = url.replace(/^http(s?)\:\/\//, '');
         if (result.length > 32) {
             result = result.substring(0, 32) + "…";
@@ -20,20 +20,20 @@
         return result;
     };
 
-    var tco = function () {
+    var tco = function() {
         expand('data-full-url');
         expand('data-expanded-url');
     };
 
     setInterval(tco, 2000);
-    
+
     // scroll top on header click
     var home = document.getElementById('global-nav-home');
     var notifications = document.querySelector('li.notifications');
     var nav = [home, notifications];
 
     for (var el of nav) {
-        (function (el) {
+        (function(el) {
             el.addEventListener('click', () => {
                 if (el.classList.contains('active')) {
                     document.body.scrollTop = 0;
@@ -41,7 +41,7 @@
             });
         })(el);
     }
-    
+
     // the bar is positioned out of viewport, see styles.css
     // move it down the DOM, gets rid of jumpy bits and style annoyances
     var bar = document.querySelector('.js-new-items-bar-container');
@@ -55,9 +55,9 @@
         'bubbles': true,
         'cancelable': true
     });
-    
+
     // click the home button if new tweets (only if scrolled to top)
-    var displayNewTweets = function () {
+    var displayNewTweets = function() {
         if (document.body.scrollTop >= 1) {
             return;
         }
