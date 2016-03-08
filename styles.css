@@ -12,8 +12,8 @@ div.dashboard {
 	display: none;
 }
 
-body.three-col div.content-main {
-    float: left;
+#timeline {
+    float: none;
     margin: 0;
 }
 
