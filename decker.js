@@ -69,15 +69,19 @@
     }
 
     setInterval(displayNewTweets, 2000);
-    
-    // remove side columns
-    // already hidden, see styles.css
-    // this is an optimization to reduce size of DOM
-    
-    var parent = document.getElementById('page-container');
-    var children = document.querySelectorAll('.dashboard');
 
-    for (var i = 0; i < children.length; i++) {
-        parent.removeChild(children[i]);
-    }
+    var clearColumns = function() {
+        // remove side columns
+        // already hidden, see styles.css
+        // this is an optimization to reduce size of DOM
+
+        var parent = document.getElementById('page-container');
+        var children = document.querySelectorAll('.dashboard');
+
+        for (var i = 0; i < children.length; i++) {
+            parent.removeChild(children[i]);
+        }
+    };
+
+    setTimeout(clearColumns, 10000);
 })();
