@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "decker",
-  "description": "Style mods; resolves (i.e., removes) t.co redirects from twitter.com",
-  "version": "0.1",
+  "description": "Twitter mods for better reading. Resolves (i.e., removes) t.co redirects from twitter.com. For personal use, ymmv, caveat emptor.",
+  "version": "0.2",
 
   "content_scripts": [
     {
