@@ -9,10 +9,6 @@ A Chrome extension that pretties up Twitter.
 
 This is for me! Feel free to use it but caveat emptor.
 
-##To use
-
-Clone or download this repo.
-
-Click “Load unpacked extension…” from chrome://extensions, and point to the downloaded folder.
+Install it from the Chrome web store: https://chrome.google.com/webstore/detail/decker/jiooocaggnohgjapeljmhoeljemddapj
 
 ![screen shot](https://raw.githubusercontent.com/clipperhouse/decker/master/Screen.Shot.2016-03-06.at.7.38.35.PM.png)
