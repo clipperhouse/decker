@@ -68,7 +68,17 @@
         }
     }
 
-    setInterval(displayNewTweets, 2000);
+    setInterval(displayNewTweets, 1000);
+    
+    var removePromoted = function() {
+        var promoted = document.querySelectorAll('.promoted-tweet');
+        for (var i = 0; i < promoted.length; i++) {
+            var li =promoted[i].parentNode; 
+            li.parentNode.removeChild(li);
+        }
+    };
+
+    setInterval(removePromoted, 2000);
 
     var clearColumns = function() {
         // remove side columns
