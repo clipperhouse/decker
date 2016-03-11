@@ -61,6 +61,13 @@
         if (document.body.scrollTop >= 1) {
             return;
         }
+        
+        var d = document.getElementById('global-tweet-dialog');
+        if (window.getComputedStyle(d).display !== 'none'){
+            // tweet modal is open, loading tweets in background causes trouble
+            return;
+        }
+
         for (var el of nav) {
             if (el.classList.contains('active') && el.classList.contains('new')) {
                 el.querySelector('a').dispatchEvent(click);
