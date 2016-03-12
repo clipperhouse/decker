@@ -51,6 +51,10 @@ div.PermalinkOverlay-modal{
     margin-left: -480px;
 }
 
+div.permalink, div.permalink .in-reply-to .stream-item, div.permalink .in-reply-to .stream-item .tweet:hover {
+    background-color: #fff;
+}
+
 div.permalink-container {
     width: 100%;
 }
