@@ -62,9 +62,9 @@
             return;
         }
         
-        var d = document.getElementById('global-tweet-dialog');
+        var d = document.querySelector('.modal-overlay');
         if (window.getComputedStyle(d).display !== 'none'){
-            // tweet modal is open, loading tweets in background causes trouble
+            // modal is open, loading tweets in background causes trouble
             return;
         }
 
