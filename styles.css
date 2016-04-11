@@ -25,6 +25,11 @@ div.tweet:hover {
     background-color: transparent;
 }
 
+div.tweet .card2, div.AdaptiveMedia, div.AdaptiveMedia.is-square {
+    max-width: 50%;
+    max-height: none;
+}
+
 .conversation-module .conversation-tweet-item div.tweet:hover {
     background-color: transparent;
 }
